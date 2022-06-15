@@ -207,7 +207,6 @@ int main(void)
     NationalAnthem Fall("Irium");
 
     Bacht.display();
-    ;
 
     return 0;
 }
