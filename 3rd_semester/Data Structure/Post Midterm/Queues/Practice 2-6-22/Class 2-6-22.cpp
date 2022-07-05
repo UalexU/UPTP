@@ -8,7 +8,7 @@ private:
     int arr[5], front, rear; // Front and rear are in pos -1 at the start
 
 public:
-    Queue(int arr[5] = {0}, int front = 0, int rear = 0);
+    Queue(int arr[5] = {0}, int front = -1, int rear = -1);
     bool isEmpty(); // Check if empty
     bool isFull();  // Check if full
     int enQueue(int);
@@ -32,7 +32,7 @@ bool Queue::isEmpty()
 
 bool Queue::isFull()
 {
-    if (rear == 5 - 1)
+    if (rear == 5 - 1) //size - 1
     {
         return true;
     }
@@ -56,8 +56,8 @@ int Queue::enQueue(int num)
 
     else
     {
-        rear++;
         arr[rear] = num;
+        rear++;
     }
 };
 
@@ -70,6 +70,7 @@ int Queue::deQueue()
     }
     if (front == 0 && rear == 0)
     {
+        
     }
 };
 
