@@ -38,14 +38,14 @@ public:
 
         else if (isEmpty())
         {
-            front = rear = SIZE - 1;
+            front = rear = SIZE - 1;  // 0 , 1 , 2, 3, 4  front = rear = Position 4 (4)
         }
 
         else if (front = SIZE - 1)
-            front = (rear + 1) % SIZE;
+            front = (rear + 1) % SIZE; // Reset the position 
 
         else
-            front++;
+            front++; //If not we can traverse the array without problems
     }
 
     int dequeueAtFront()
@@ -86,8 +86,15 @@ dequeueAtRear()
 
 int count()
 {
+    int i, count = 0;
+    if(isEmpty()) return 0;
+    else if (isFull()) {
+        for (i = 0; i < N; i++ ){
+            
+        }
+    }
 }
 
-int display(){}
-
-;
+int display(){
+    cout << "" << '\n'; 
+}
